@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECON 2006 · Principles of Macroeconomics · Fall 2026</title>
+</head>
+<body style="margin:0; padding:0; background:#EAF6FF;">
+
+<!--
+  ECON 2006 — Fall 2026 landing page (v2 — dashboard layout)
+  Same content and palette as v1, rearranged into a two-column
+  "sidebar + main" composition instead of stacked full-width sections,
+  so it reads differently from the Summer II page at a glance.
+  Still 100% inline-styled — no <style>/<script>/onclick, no
+  position:fixed/sticky — since Canvas strips all of those on save.
+  To embed: copy everything between the <div id="econ2006-page"> tags
+  (not the outer html/head/body) into Canvas Pages → HTML Editor.
+-->
+
+<div id="econ2006-page" style="background:#EAF6FF; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#0B2545; line-height:1.65;">
+
+  <!-- QUICK NAV (static, not fixed) -->
+  <div style="padding:.9rem 2rem; text-align:center; background:#0B2545;">
+    <span style="font-size:.7rem; letter-spacing:.1em; color:#EAF6FF;">
+      <a href="#objective" style="color:#EAF6FF; text-decoration:none; margin:0 .6rem;">Objective</a>·
+      <a href="#info" style="color:#EAF6FF; text-decoration:none; margin:0 .6rem;">Course&nbsp;Info</a>·
+      <a href="#modules" style="color:#EAF6FF; text-decoration:none; margin:0 .6rem;">Modules</a>·
+      <a href="#assessments" style="color:#EAF6FF; text-decoration:none; margin:0 .6rem;">Assessments</a>·
+      <a href="#grading" style="color:#EAF6FF; text-decoration:none; margin:0 .6rem;">Grading</a>·
+      <a href="#textbook" style="color:#EAF6FF; text-decoration:none; margin:0 .6rem;">Textbook</a>·
+      <a href="#policies" style="color:#EAF6FF; text-decoration:none; margin:0 .6rem;">Policies</a>
+    </span>
+  </div>
+
+  <!-- HERO — two-column: title/CTA left, quick-facts card right -->
+  <div style="padding:3.5rem 2rem; background:radial-gradient(ellipse 60% 50% at 15% 25%, rgba(255,107,74,.16) 0%, transparent 70%), radial-gradient(ellipse 55% 55% at 88% 20%, rgba(23,163,152,.18) 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 50% 95%, rgba(142,95,224,.14) 0%, transparent 70%), linear-gradient(180deg, #EAF6FF 0%, #D3E9FF 100%);">
+    <div style="max-width:1120px; margin:0 auto; display:flex; flex-wrap:wrap; gap:3rem; align-items:center;">
+
+      <div style="flex:1 1 420px;">
+        <div style="display:inline-block; font-size:.72rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; background:#17A398; color:#ffffff; padding:.35rem 1rem; border-radius:2rem; margin-bottom:1.5rem;">Virginia Tech · Principles of Economics (Macro)</div>
+
+        <div style="font-family:Georgia, 'Times New Roman', serif; font-size:clamp(2.4rem, 7vw, 4.4rem); font-weight:700; letter-spacing:-.01em; line-height:1.05; color:#0B2545;">ECON 2006</div>
+
+        <p style="font-size:1.05rem; color:#4C6A85; max-width:460px; margin:1.1rem 0 0;">A deep dive into how economies actually work, and why they sometimes don't.</p>
+
+        <p style="font-family:Georgia, 'Times New Roman', serif; font-style:italic; font-size:1.05rem; color:#0B2545; max-width:480px; margin:1.5rem 0 0;">Why does rent keep rising? Who decides how much money exists? What actually causes a recession?</p>
+
+        <div style="margin-top:2rem;">
+          <a href="#modules" style="display:inline-block; padding:.8rem 2.1rem; font-size:.85rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; text-decoration:none; border-radius:.3rem; background:#FF6B4A; color:#ffffff;">Explore the Course</a>
+        </div>
+      </div>
+
+      <div style="flex:1 1 280px; background:#ffffff; border:1px solid #B9DCF5; border-radius:.75rem; padding:1.6rem;">
+        <div style="font-size:.68rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:#0E7A70; margin-bottom:1rem;">Quick Facts</div>
+        <div style="display:flex; justify-content:space-between; padding:.55rem 0; border-bottom:1px solid #DCEEFF; font-size:.85rem;"><span style="color:#4C6A85;">Semester</span><span style="color:#0B2545; font-weight:700; text-align:right;">Fall 2026 · Aug 24 – Dec 16</span></div>
+        <div style="display:flex; justify-content:space-between; padding:.55rem 0; border-bottom:1px solid #DCEEFF; font-size:.85rem;"><span style="color:#4C6A85;">Class Time</span><span style="color:#0B2545; font-weight:700; text-align:right;">MWF · 12:20 – 1:10 PM</span></div>
+        <div style="display:flex; justify-content:space-between; padding:.55rem 0; border-bottom:1px solid #DCEEFF; font-size:.85rem;"><span style="color:#4C6A85;">Format</span><span style="color:#0B2545; font-weight:700; text-align:right;">In-Person, TORG 1060</span></div>
+        <div style="display:flex; justify-content:space-between; padding:.55rem 0; font-size:.85rem;"><span style="color:#4C6A85;">Credit Hours</span><span style="color:#0B2545; font-weight:700; text-align:right;">3</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DASHBOARD BODY: sidebar + main -->
+  <div style="max-width:1200px; margin:0 auto; padding:3.5rem 2rem; display:flex; flex-wrap:wrap; gap:2.5rem;">
+
+    <!-- ══════ SIDEBAR ══════ -->
+    <div style="flex:1 1 300px; max-width:380px; display:flex; flex-direction:column; gap:1.75rem;">
+
+      <!-- COURSE INFO -->
+      <div id="info" style="background:#ffffff; border:1px solid #B9DCF5; border-radius:.75rem; padding:1.6rem;">
+        <div style="display:inline-block; font-size:.66rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; background:rgba(23,163,152,.14); color:#0E7A70; padding:.2rem .6rem; border-radius:.25rem; margin-bottom:1rem;">Course Info</div>
+
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">Instructor</span><span style="color:#0B2545; font-weight:600; text-align:right;">Dr. Bipasha Ray</span></div>
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">Email</span><span style="text-align:right;"><a href="mailto:bipasha@vt.edu" style="color:#0E7A70; text-decoration:none; font-weight:600;">bipasha@vt.edu</a></span></div>
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">Email Response Time</span><span style="color:#0B2545; font-weight:600; text-align:right;">Within 24 hours</span></div>
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">Office</span><span style="color:#0B2545; font-weight:600; text-align:right;">222B War Memorial Hall</span></div>
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">Office Hours</span><span style="color:#0B2545; font-weight:600; text-align:right;">Tue 10 AM–12 PM, or by appt.</span></div>
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">Virtual Office Hours</span><span style="text-align:right;"><a href="https://virginiatech.zoom.us/my/bipasharay" style="color:#0E7A70; text-decoration:none; font-weight:600;">Zoom link →</a></span></div>
+
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">Teaching Assistant</span><span style="color:#0B2545; font-weight:600; text-align:right;">Ethan Ziqi Zhou</span></div>
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">TA Email</span><span style="text-align:right;"><a href="mailto:ethanzhou@vt.edu" style="color:#0E7A70; text-decoration:none; font-weight:600;">ethanzhou@vt.edu</a></span></div>
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">TA Office</span><span style="color:#0B2545; font-weight:600; text-align:right;">Hahn 305</span></div>
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">TA Office Hours</span><span style="color:#0B2545; font-weight:600; text-align:right;">Mon &amp; Wed, 4:00 – 5:00 PM</span></div>
+
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">Classroom</span><span style="color:#0B2545; font-weight:600; text-align:right;">TORG 1060</span></div>
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">Credit Hours</span><span style="color:#0B2545; font-weight:600; text-align:right;">3</span></div>
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">Semester Dates</span><span style="color:#0B2545; font-weight:600; text-align:right;">Aug 24 – Dec 16, 2026</span></div>
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">Final Exam</span><span style="color:#0B2545; font-weight:600; text-align:right;">Dec 11, 2026 · 7:45–9:45 AM</span></div>
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">Homework Due</span><span style="color:#0B2545; font-weight:600; text-align:right;">Sundays, 11:59 PM</span></div>
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; border-bottom:1px solid #DCEEFF; font-size:.83rem;"><span style="color:#4C6A85;">Canvas</span><span style="text-align:right;"><a href="https://canvas.vt.edu/courses/239014" style="color:#0E7A70; text-decoration:none; font-weight:600;">course site →</a></span></div>
+        <div style="display:flex; justify-content:space-between; gap:.75rem; padding:.5rem 0; font-size:.83rem;"><span style="color:#4C6A85;">Econ Tutoring Center</span><span style="color:#0B2545; font-weight:600; text-align:right;">Mon–Thu · 6–8 PM · Pamplin 3028</span></div>
+
+        <p style="margin-top:1rem; font-size:.76rem; color:#4C6A85;">All course materials are posted on Canvas. Check regularly.</p>
+      </div>
+
+      <!-- GRADING -->
+      <div id="grading" style="background:#ffffff; border:1px solid #B9DCF5; border-radius:.75rem; padding:1.6rem;">
+        <div style="display:inline-block; font-size:.66rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; background:rgba(23,163,152,.14); color:#0E7A70; padding:.2rem .6rem; border-radius:.25rem; margin-bottom:1rem;">Grading</div>
+
+        <div style="margin-bottom:.85rem;">
+          <div style="display:flex; justify-content:space-between; font-size:.8rem; margin-bottom:.35rem;"><span style="color:#0B2545; font-weight:500;">Final Exam</span><span style="color:#4C6A85; font-weight:600;">35%</span></div>
+          <div style="height:8px; background:#DCEEFF; border-radius:5px; overflow:hidden; border:1px solid #B9DCF5;"><div style="height:100%; border-radius:5px; background:linear-gradient(90deg,#17A398,#FF6B4A); width:35%;"></div></div>
+        </div>
+        <div style="margin-bottom:.85rem;">
+          <div style="display:flex; justify-content:space-between; font-size:.8rem; margin-bottom:.35rem;"><span style="color:#0B2545; font-weight:500;">Midterm I</span><span style="color:#4C6A85; font-weight:600;">15%</span></div>
+          <div style="height:8px; background:#DCEEFF; border-radius:5px; overflow:hidden; border:1px solid #B9DCF5;"><div style="height:100%; border-radius:5px; background:linear-gradient(90deg,#17A398,#FF6B4A); width:15%;"></div></div>
+        </div>
+        <div style="margin-bottom:.85rem;">
+          <div style="display:flex; justify-content:space-between; font-size:.8rem; margin-bottom:.35rem;"><span style="color:#0B2545; font-weight:500;">Midterm II</span><span style="color:#4C6A85; font-weight:600;">15%</span></div>
+          <div style="height:8px; background:#DCEEFF; border-radius:5px; overflow:hidden; border:1px solid #B9DCF5;"><div style="height:100%; border-radius:5px; background:linear-gradient(90deg,#17A398,#FF6B4A); width:15%;"></div></div>
+        </div>
+        <div style="margin-bottom:.85rem;">
+          <div style="display:flex; justify-content:space-between; font-size:.8rem; margin-bottom:.35rem;"><span style="color:#0B2545; font-weight:500;">Homework</span><span style="color:#4C6A85; font-weight:600;">20%</span></div>
+          <div style="height:8px; background:#DCEEFF; border-radius:5px; overflow:hidden; border:1px solid #B9DCF5;"><div style="height:100%; border-radius:5px; background:linear-gradient(90deg,#17A398,#FF6B4A); width:20%;"></div></div>
+        </div>
+        <div style="margin-bottom:1.1rem;">
+          <div style="display:flex; justify-content:space-between; font-size:.8rem; margin-bottom:.35rem;"><span style="color:#0B2545; font-weight:500;">Quizzes</span><span style="color:#4C6A85; font-weight:600;">15%</span></div>
+          <div style="height:8px; background:#DCEEFF; border-radius:5px; overflow:hidden; border:1px solid #B9DCF5;"><div style="height:100%; border-radius:5px; background:linear-gradient(90deg,#17A398,#FF6B4A); width:15%;"></div></div>
+        </div>
+
+        <a href="https://canvas.vt.edu/courses/239014/grades" style="display:block; text-align:center; padding:.55rem 1rem; font-size:.74rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:#fff; background:#17A398; border-radius:.3rem; text-decoration:none; margin-bottom:1.1rem;">📊 View My Grades</a>
+
+        <div style="font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#4C6A85; margin-bottom:.6rem;">Grading Scale</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:#B9DCF5; border:1px solid #B9DCF5; border-radius:.4rem; overflow:hidden; font-size:.78rem;">
+          <div style="background:#DCEEFF; padding:.4rem .6rem; display:flex; justify-content:space-between;"><span style="font-weight:800; color:#0E7A70;">A</span><span style="color:#4C6A85;">95–100</span></div>
+          <div style="background:#DCEEFF; padding:.4rem .6rem; display:flex; justify-content:space-between;"><span style="font-weight:800; color:#0E7A70;">A−</span><span style="color:#4C6A85;">90–94.9</span></div>
+          <div style="background:#ffffff; padding:.4rem .6rem; display:flex; justify-content:space-between;"><span style="font-weight:800; color:#0E7A70;">B+</span><span style="color:#4C6A85;">85–89.9</span></div>
+          <div style="background:#ffffff; padding:.4rem .6rem; display:flex; justify-content:space-between;"><span style="font-weight:800; color:#0E7A70;">B</span><span style="color:#4C6A85;">80–84.9</span></div>
+          <div style="background:#DCEEFF; padding:.4rem .6rem; display:flex; justify-content:space-between;"><span style="font-weight:800; color:#0E7A70;">B−</span><span style="color:#4C6A85;">75–79.9</span></div>
+          <div style="background:#DCEEFF; padding:.4rem .6rem; display:flex; justify-content:space-between;"><span style="font-weight:800; color:#0E7A70;">C+</span><span style="color:#4C6A85;">70–74.9</span></div>
+          <div style="background:#ffffff; padding:.4rem .6rem; display:flex; justify-content:space-between;"><span style="font-weight:800; color:#0E7A70;">C</span><span style="color:#4C6A85;">65–69.9</span></div>
+          <div style="background:#ffffff; padding:.4rem .6rem; display:flex; justify-content:space-between;"><span style="font-weight:800; color:#0E7A70;">C−</span><span style="color:#4C6A85;">60–64.9</span></div>
+          <div style="background:#DCEEFF; padding:.4rem .6rem; display:flex; justify-content:space-between;"><span style="font-weight:800; color:#0E7A70;">D+</span><span style="color:#4C6A85;">55–59.9</span></div>
+          <div style="background:#DCEEFF; padding:.4rem .6rem; display:flex; justify-content:space-between;"><span style="font-weight:800; color:#0E7A70;">D</span><span style="color:#4C6A85;">50–54.9</span></div>
+          <div style="background:#ffffff; padding:.4rem .6rem; display:flex; justify-content:space-between;"><span style="font-weight:800; color:#0E7A70;">D−</span><span style="color:#4C6A85;">45–49.9</span></div>
+          <div style="background:#ffffff; padding:.4rem .6rem; display:flex; justify-content:space-between;"><span style="font-weight:800; color:#0E7A70;">F</span><span style="color:#4C6A85;">&lt; 45</span></div>
+        </div>
+      </div>
+
+      <!-- TEXTBOOK -->
+      <div id="textbook" style="background:#ffffff; border:1px solid #B9DCF5; border-radius:.75rem; padding:1.6rem; border-left:5px solid #17A398;">
+        <div style="display:inline-block; font-size:.66rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; background:rgba(23,163,152,.14); color:#0E7A70; padding:.2rem .6rem; border-radius:.25rem; margin-bottom:1rem;">Required Text</div>
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <div style="font-size:2.4rem; flex-shrink:0;">📘</div>
+          <div>
+            <div style="font-size:.95rem; font-weight:700; color:#0B2545; margin-bottom:.3rem;">Principles of Macroeconomics, 14th Ed.</div>
+            <div style="font-size:.8rem; color:#4C6A85; margin-bottom:.6rem;">Case, Fair, &amp; Oster (2024) · Pearson</div>
+            <div style="font-size:.75rem; color:#0B2545; font-family:monospace; margin-bottom:.15rem;">14th: 978-0135345412 / 978-0135374993</div>
+            <div style="font-size:.75rem; color:#0B2545; font-family:monospace;">13th: 978-0135662168</div>
+            <div style="margin-top:.6rem; font-size:.76rem; color:#4C6A85; font-style:italic;">Earlier editions acceptable; lectures often go beyond the text.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GOOD TO KNOW -->
+      <div style="display:flex; flex-direction:column; gap:.75rem;">
+        <div style="border-radius:.6rem; padding:1.1rem 1.3rem; background:#FF6B4A;">
+          <div style="font-size:.85rem; font-weight:800; color:#fff;">📬 Check Canvas + Email</div>
+          <div style="font-size:.78rem; line-height:1.5; color:rgba(255,255,255,.9); margin-top:.3rem;">Announcements, exam dates, and schedule changes are all on Canvas.</div>
+        </div>
+        <div style="border-radius:.6rem; padding:1.1rem 1.3rem; background:#17A398;">
+          <div style="font-size:.85rem; font-weight:800; color:#fff;">🔒 LockDown Browser</div>
+          <div style="font-size:.78rem; line-height:1.5; color:rgba(255,255,255,.9); margin-top:.3rem;">Required for both midterms, the final, and every quiz. Not for homework.</div>
+        </div>
+        <div style="border-radius:.6rem; padding:1.1rem 1.3rem; background:#8E5FE0;">
+          <div style="font-size:.85rem; font-weight:800; color:#fff;">🎓 Attendance</div>
+          <div style="font-size:.78rem; line-height:1.5; color:rgba(255,255,255,.9); margin-top:.3rem;">Not taken formally, but you're responsible for everything covered in class.</div>
+        </div>
+        <div style="border-radius:.6rem; padding:1.1rem 1.3rem; background:#FFC145;">
+          <div style="font-size:.85rem; font-weight:800; color:#5A3A00;">📩 Office Hours Recap</div>
+          <div style="font-size:.78rem; line-height:1.5; color:#5A3A00; margin-top:.3rem;">Instructor Tue 10–12, or Zoom by appointment. TA Mon &amp; Wed 4–5 PM. Tutoring Mon–Thu 6–8 PM.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══════ MAIN ══════ -->
+    <div style="flex:2 1 480px;">
+
+      <!-- COURSE OBJECTIVE -->
+      <div id="objective" style="margin-bottom:3.5rem;">
+        <div style="display:inline-block; font-size:.68rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; background:rgba(23,163,152,.14); color:#0E7A70; padding:.22rem .7rem; border-radius:.25rem; margin-bottom:.9rem;">Course Objective</div>
+        <div style="font-family:Georgia, 'Times New Roman', serif; font-size:clamp(1.5rem, 3.5vw, 2rem); font-weight:700; color:#0B2545; margin-bottom:1.25rem; line-height:1.2;">What this course is about.</div>
+        <p style="font-size:.95rem; color:#4C6A85; line-height:1.85;">This course looks at how economies function, grow, and respond to shocks, from the everyday choices households and firms make to the policy decisions that shape inflation, unemployment, and growth. You'll learn how markets coordinate scarce resources, how economists actually measure national output and prices, and what fiscal and monetary policy can (and can't) do to stabilize things when they go sideways.</p>
+        <p style="font-size:.95rem; color:#4C6A85; line-height:1.85; margin-top:1rem;">By the end of the semester, you should be able to read a GDP report or a Federal Reserve announcement and actually understand what it means, then use that same reasoning on business decisions, policy debates, and everyday questions well beyond this classroom.</p>
+      </div>
+
+      <!-- MODULES -->
+      <div id="modules" style="margin-bottom:3.5rem;">
+        <div style="display:inline-block; font-size:.68rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; background:rgba(23,163,152,.14); color:#0E7A70; padding:.22rem .7rem; border-radius:.25rem; margin-bottom:.9rem;">The Journey</div>
+        <div style="font-family:Georgia, 'Times New Roman', serif; font-size:clamp(1.5rem, 3.5vw, 2rem); font-weight:700; color:#0B2545; margin-bottom:1.1rem; line-height:1.2;">New ideas around every corner.</div>
+        <p style="font-size:.95rem; color:#4C6A85; margin-bottom:1.75rem;">Each module opens a new lens for seeing the economy. Titles link to the modules page in Canvas.</p>
+
+        <div style="border:1px solid #B9DCF5; border-radius:.75rem; overflow:hidden;">
+
+          <!-- M1 -->
+          <div style="background:#ffffff; border-bottom:1px solid #B9DCF5; border-left:5px solid #FF6B4A;">
+            <div style="display:flex; align-items:center; gap:1.1rem; padding:1.1rem 1.3rem;">
+              <div style="width:34px; height:34px; border-radius:.35rem; display:flex; align-items:center; justify-content:center; font-size:.78rem; font-weight:800; flex-shrink:0; background:#FF6B4A; color:#ffffff;">M1</div>
+              <div>
+                <div style="font-size:.95rem; font-weight:700; color:#0B2545;"><a href="https://canvas.vt.edu/courses/239014/modules" style="color:#0B2545; text-decoration:none;">Introduction to Economics: The Economic Setting</a></div>
+                <div style="font-size:.8rem; color:#4C6A85; margin-top:.15rem;">Why does scarcity force every choice you'll ever make?</div>
+              </div>
+            </div>
+            <div style="padding:0 1.3rem 1.1rem 3.3rem;">
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">01</span><span style="color:#0B2545;">What Economics Is and Why It Matters</span>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0; border-top:1px solid #B9DCF5;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">02</span><span style="color:#0B2545;">Choice in a World of Scarcity</span>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0; border-top:1px solid #B9DCF5;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">03</span><span style="color:#0B2545;">The Basics of Markets: Demand, Supply and Market Equilibrium</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- M2 -->
+          <div style="background:#ffffff; border-bottom:1px solid #B9DCF5; border-left:5px solid #17A398;">
+            <div style="display:flex; align-items:center; gap:1.1rem; padding:1.1rem 1.3rem;">
+              <div style="width:34px; height:34px; border-radius:.35rem; display:flex; align-items:center; justify-content:center; font-size:.78rem; font-weight:800; flex-shrink:0; background:#17A398; color:#ffffff;">M2</div>
+              <div>
+                <div style="font-size:.95rem; font-weight:700; color:#0B2545;"><a href="https://canvas.vt.edu/courses/239014/modules" style="color:#0B2545; text-decoration:none;">Measuring the Economy</a></div>
+                <div style="font-size:.8rem; color:#4C6A85; margin-top:.15rem;">GDP, unemployment, inflation: how do we even measure an economy?</div>
+              </div>
+            </div>
+            <div style="padding:0 1.3rem 1.1rem 3.3rem;">
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">04</span><span style="color:#0B2545;">Why Study Macroeconomics</span>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0; border-top:1px solid #B9DCF5;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">05</span><span style="color:#0B2545;">Measuring National Output</span>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0; border-top:1px solid #B9DCF5;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">06</span><span style="color:#0B2545;">Measuring Unemployment and Inflation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- M3 -->
+          <div style="background:#ffffff; border-bottom:1px solid #B9DCF5; border-left:5px solid #8E5FE0;">
+            <div style="display:flex; align-items:center; gap:1.1rem; padding:1.1rem 1.3rem;">
+              <div style="width:34px; height:34px; border-radius:.35rem; display:flex; align-items:center; justify-content:center; font-size:.78rem; font-weight:800; flex-shrink:0; background:#8E5FE0; color:#ffffff;">M3</div>
+              <div>
+                <div style="font-size:.95rem; font-weight:700; color:#0B2545;"><a href="https://canvas.vt.edu/courses/239014/modules" style="color:#0B2545; text-decoration:none;">Understanding Aggregate Behavior: The Basics of Popular Macro Models</a></div>
+                <div style="font-size:.8rem; color:#4C6A85; margin-top:.15rem;">Fiscal policy, monetary policy, the Fed: this is where things get real.</div>
+              </div>
+            </div>
+            <div style="padding:0 1.3rem 1.1rem 3.3rem;">
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">07</span><span style="color:#0B2545;">Aggregate Expenditure and Equilibrium Output</span>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0; border-top:1px solid #B9DCF5;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">08</span><span style="color:#0B2545;">Fiscal Policy: Government's Role in the Economy</span>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0; border-top:1px solid #B9DCF5;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">09</span><span style="color:#0B2545;">How Money Moves: An Introduction to the Money Market &amp; Monetary Policy</span>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0; border-top:1px solid #B9DCF5;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">10</span><span style="color:#0B2545;">Aggregate Demand, Aggregate Supply, and Price Level</span>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0; border-top:1px solid #B9DCF5;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">11</span><span style="color:#0B2545;">Policy Effects and Cost Shocks in the AS/AD Model</span>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0; border-top:1px solid #B9DCF5;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">12</span><span style="color:#0B2545;">The Labor Market</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- M4 -->
+          <div style="background:#ffffff; border-bottom:1px solid #B9DCF5; border-left:5px solid #FFC145;">
+            <div style="display:flex; align-items:center; gap:1.1rem; padding:1.1rem 1.3rem;">
+              <div style="width:34px; height:34px; border-radius:.35rem; display:flex; align-items:center; justify-content:center; font-size:.78rem; font-weight:800; flex-shrink:0; background:#FFC145; color:#5A3A00;">M4</div>
+              <div>
+                <div style="font-size:.95rem; font-weight:700; color:#0B2545;"><a href="https://canvas.vt.edu/courses/239014/modules" style="color:#0B2545; text-decoration:none;">Macroeconomics Beyond Borders: International Trade</a></div>
+                <div style="font-size:.8rem; color:#4C6A85; margin-top:.15rem;">Why does your iPhone come from China? Why do exchange rates matter?</div>
+              </div>
+            </div>
+            <div style="padding:0 1.3rem 1.1rem 3.3rem;">
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">13</span><span style="color:#0B2545;">Comparative Advantage &amp; International Trade</span>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0; border-top:1px solid #B9DCF5;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">14</span><span style="color:#0B2545;">Open Economy Macroeconomics: Balance of Payments &amp; Exchange Rates</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- M5 -->
+          <div style="background:#ffffff; border-left:5px solid #D9492C;">
+            <div style="display:flex; align-items:center; gap:1.1rem; padding:1.1rem 1.3rem;">
+              <div style="width:34px; height:34px; border-radius:.35rem; display:flex; align-items:center; justify-content:center; font-size:.78rem; font-weight:800; flex-shrink:0; background:#D9492C; color:#ffffff;">M5</div>
+              <div>
+                <div style="font-size:.95rem; font-weight:700; color:#0B2545;">
+                  <a href="https://canvas.vt.edu/courses/239014/modules" style="color:#0B2545; text-decoration:none;">Growth &amp; Debate</a>
+                  <span style="display:inline-block; font-size:.6rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; background:#FFC145; color:#5A3A00; padding:.15rem .45rem; border-radius:.2rem; margin-left:.5rem; vertical-align:middle;">Time Permitting</span>
+                </div>
+                <div style="font-size:.8rem; color:#4C6A85; margin-top:.15rem;">Why do some countries grow rich while others stay poor, and who's arguing about it?</div>
+              </div>
+            </div>
+            <div style="padding:0 1.3rem 1.1rem 3.3rem;">
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">15</span><span style="color:#0B2545;">Why Economies Expand: Understanding Economic Growth</span>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:.7rem; font-size:.83rem; padding:.35rem 0; border-top:1px solid #B9DCF5;">
+                <span style="font-size:.68rem; font-weight:700; color:#4C6A85; background:#DCEEFF; border-radius:.2rem; padding:.1rem .4rem; flex-shrink:0; margin-top:.1rem;">16</span><span style="color:#0B2545;">Alternative Views in Macroeconomics</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ASSESSMENTS -->
+      <div id="assessments" style="margin-bottom:3.5rem;">
+        <div style="display:inline-block; font-size:.68rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; background:rgba(23,163,152,.14); color:#0E7A70; padding:.22rem .7rem; border-radius:.25rem; margin-bottom:.9rem;">Assessments</div>
+        <div style="font-family:Georgia, 'Times New Roman', serif; font-size:clamp(1.5rem, 3.5vw, 2rem); font-weight:700; color:#0B2545; margin-bottom:1.1rem; line-height:1.2;">How you'll be evaluated.</div>
+        <p style="font-size:.9rem; color:#4C6A85; margin-bottom:1.75rem;">See the Grading panel in the sidebar for the full weight breakdown and letter-grade scale.</p>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:1.1rem;">
+
+          <div style="background:#ffffff; border:1px solid #B9DCF5; border-radius:.6rem; padding:1.4rem; border-top:4px solid #17A398;">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:.9rem; gap:.75rem;">
+              <div style="display:flex; align-items:center; gap:.65rem;">
+                <div style="font-size:1.5rem; flex-shrink:0;">📋</div>
+                <div style="font-size:.92rem; font-weight:800; color:#0B2545;">Final Exam</div>
+              </div>
+              <div style="font-size:.7rem; font-weight:700; color:#fff; background:#17A398; padding:.2rem .55rem; border-radius:2rem; white-space:nowrap; flex-shrink:0;">35%</div>
+            </div>
+            <div style="font-size:.8rem; color:#4C6A85; line-height:1.65;">Cumulative, covering all 16 topics. Dec 11, 2026, 7:45–9:45 AM, TORG 1060. Online via Canvas with Respondus LockDown Browser. No make-ups without prior notice and documentation.</div>
+            <div style="display:flex; gap:.4rem; flex-wrap:wrap; margin-top:.8rem;">
+              <span style="font-size:.62rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:.2rem .5rem; border-radius:.2rem; background:#FF6B4A; color:#fff;">LockDown</span>
+              <span style="font-size:.62rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:.2rem .5rem; border-radius:.2rem; background:#17A398; color:#fff;">Canvas</span>
+            </div>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid #B9DCF5; border-radius:.6rem; padding:1.4rem; border-top:4px solid #FF6B4A;">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:.9rem; gap:.75rem;">
+              <div style="display:flex; align-items:center; gap:.65rem;">
+                <div style="font-size:1.5rem; flex-shrink:0;">📝</div>
+                <div style="font-size:.92rem; font-weight:800; color:#0B2545;">Midterm Exams</div>
+              </div>
+              <div style="font-size:.7rem; font-weight:700; color:#fff; background:#17A398; padding:.2rem .55rem; border-radius:2rem; white-space:nowrap; flex-shrink:0;">15% each</div>
+            </div>
+            <div style="font-size:.8rem; color:#4C6A85; line-height:1.65;">Two midterms during the usual class period in TORG 1060, dates still TBD. They'll be announced in class and on Canvas at least a week ahead. No automatic make-ups.</div>
+            <div style="display:flex; gap:.4rem; flex-wrap:wrap; margin-top:.8rem;">
+              <span style="font-size:.62rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:.2rem .5rem; border-radius:.2rem; background:#FF6B4A; color:#fff;">LockDown</span>
+              <span style="font-size:.62rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:.2rem .5rem; border-radius:.2rem; background:#17A398; color:#fff;">Canvas</span>
+            </div>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid #B9DCF5; border-radius:.6rem; padding:1.4rem; border-top:4px solid #8E5FE0;">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:.9rem; gap:.75rem;">
+              <div style="display:flex; align-items:center; gap:.65rem;">
+                <div style="font-size:1.5rem; flex-shrink:0;">✏️</div>
+                <div style="font-size:.92rem; font-weight:800; color:#0B2545;">Homework</div>
+              </div>
+              <div style="font-size:.7rem; font-weight:700; color:#fff; background:#17A398; padding:.2rem .55rem; border-radius:2rem; white-space:nowrap; flex-shrink:0;">20%</div>
+            </div>
+            <div style="font-size:.8rem; color:#4C6A85; line-height:1.65;">Regular problem sets: theoretical, numerical, data-based. Discuss them with your classmates, but the work you turn in has to be your own. Due on Canvas every Sunday at 11:59 PM; late work generally isn't accepted without prior approval.</div>
+            <div style="display:flex; gap:.4rem; flex-wrap:wrap; margin-top:.8rem;">
+              <span style="font-size:.62rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:.2rem .5rem; border-radius:.2rem; background:#8E5FE0; color:#fff;">No LockDown</span>
+              <span style="font-size:.62rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:.2rem .5rem; border-radius:.2rem; background:#17A398; color:#fff;">Canvas</span>
+            </div>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid #B9DCF5; border-radius:.6rem; padding:1.4rem; border-top:4px solid #FFC145;">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:.9rem; gap:.75rem;">
+              <div style="display:flex; align-items:center; gap:.65rem;">
+                <div style="font-size:1.5rem; flex-shrink:0;">💻</div>
+                <div style="font-size:.92rem; font-weight:800; color:#0B2545;">Quizzes</div>
+              </div>
+              <div style="font-size:.7rem; font-weight:700; color:#fff; background:#17A398; padding:.2rem .55rem; border-radius:2rem; white-space:nowrap; flex-shrink:0;">15%</div>
+            </div>
+            <div style="font-size:.8rem; color:#4C6A85; line-height:1.65;">One quiz per module (five total), taken in class via Canvas with LockDown Browser. You need to be there in person: no remote or late submissions. Each quiz carries equal weight; dates announced in advance.</div>
+            <div style="display:flex; gap:.4rem; flex-wrap:wrap; margin-top:.8rem;">
+              <span style="font-size:.62rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:.2rem .5rem; border-radius:.2rem; background:#FF6B4A; color:#fff;">LockDown</span>
+              <span style="font-size:.62rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:.2rem .5rem; border-radius:.2rem; background:#FFC145; color:#5A3A00;">In-Class</span>
+              <span style="font-size:.62rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:.2rem .5rem; border-radius:.2rem; background:#17A398; color:#fff;">Canvas</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- POLICIES -->
+      <div id="policies">
+        <div style="display:inline-block; font-size:.68rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; background:rgba(23,163,152,.14); color:#0E7A70; padding:.22rem .7rem; border-radius:.25rem; margin-bottom:.9rem;">Policies</div>
+        <div style="font-family:Georgia, 'Times New Roman', serif; font-size:clamp(1.5rem, 3.5vw, 2rem); font-weight:700; color:#0B2545; margin-bottom:1.5rem; line-height:1.2;">The fine print. <span style="font-weight:400; color:#4C6A85;">But actually important.</span></div>
+
+        <div style="margin-bottom:2.25rem;">
+          <div style="font-size:.68rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; color:#0E7A70; margin-bottom:.7rem; padding-bottom:.45rem; border-bottom:2px solid #B9DCF5;">Missed Exams &amp; Quizzes</div>
+          <p style="font-size:.86rem; color:#4C6A85; line-height:1.75;">Students are expected to attend all exams and quizzes. There are no make-up opportunities by default. If you miss one for an unavoidable reason, illness for example, adjustments may be considered on a case-by-case basis, but you'll need to submit valid documentation to support your case.</p>
+        </div>
+
+        <div style="margin-bottom:2.25rem;">
+          <div style="font-size:.68rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; color:#0E7A70; margin-bottom:.7rem; padding-bottom:.45rem; border-bottom:2px solid #B9DCF5;">Academic Accommodations</div>
+          <p style="font-size:.86rem; color:#4C6A85; line-height:1.75;">Virginia Tech welcomes students with disabilities into the University's educational programs. The University promotes efforts to provide equal access and a culture of inclusion without altering the essential elements of coursework. If you anticipate or experience academic barriers that may be due to disability, including but not limited to ADHD, chronic or temporary medical conditions, deaf or hard of hearing, learning disability, mental health, or vision impairment, please contact the Services for Students with Disabilities (SSD) office at <strong style="color:#0B2545;">540-231-3788</strong>, <a href="mailto:ssd@vt.edu" style="color:#0E7A70;">ssd@vt.edu</a>, or visit <a href="https://ssd.vt.edu" style="color:#0E7A70;">ssd.vt.edu</a>.</p>
+          <p style="font-size:.86rem; color:#4C6A85; line-height:1.75; margin-top:.7rem;">If you have an SSD accommodation letter, please meet with me during office hours as early in the semester as possible to deliver your letter and discuss your accommodation. You must give me reasonable notice to implement your accommodation, which is at least a week before each exam. If there are aspects of this course that prevent you from learning or exclude you, please let me know as soon as possible. Together we will develop strategies to meet both your needs and the requirements of the course.</p>
+        </div>
+
+        <div>
+          <div style="font-size:.68rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; color:#0E7A70; margin-bottom:.7rem; padding-bottom:.45rem; border-bottom:2px solid #B9DCF5;">Honor Code</div>
+          <div style="margin:1.1rem 0; padding:1rem 1.4rem; border-left:5px solid #FFC145; background:rgba(255,193,69,.16); border-radius:0 .4rem .4rem 0; font-style:italic; color:#0B2545; font-size:.88rem;">"As a Hokie, I will conduct myself with honor and integrity at all times. I will not lie, cheat, or steal, nor will I accept the actions of those who do."</div>
+          <p style="font-size:.86rem; color:#4C6A85; line-height:1.75;">Students enrolled in this course are responsible for abiding by the Honor Code on each assignment and/or exam. A student who has doubts about how the Honor Code applies to any assignment is responsible for obtaining specific guidance from the course instructor before submitting the assignment for evaluation. Students are strongly discouraged from misusing unauthorized online sources, including generative artificial intelligence outlets. Ignorance of the rules does not exclude any member of the University community from the requirements and expectations of the Honor Code.</p>
+          <p style="font-size:.86rem; color:#4C6A85; line-height:1.75; margin-top:.7rem;">For more information: <a href="https://www.honorsystem.vt.edu/" style="color:#0E7A70;">honorsystem.vt.edu →</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background:#0B2545; padding:2.5rem 2rem; text-align:center; font-size:.78rem; color:rgba(234,246,255,.6);">
+    <p><strong style="color:rgba(234,246,255,.92);">ECON 2006 · Principles of Economics (Macro) · Fall 2026 · Virginia Tech</strong></p>
+    <p style="margin-top:.4rem;">Dr. Bipasha Ray · <a href="mailto:bipasha@vt.edu" style="color:rgba(234,246,255,.75);">bipasha@vt.edu</a></p>
+  </div>
+
+</div>
+</body>
+</html>
